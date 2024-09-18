@@ -15,8 +15,6 @@ public class CustomExceptionHandler {
     ErrorResponse errorResponse;
 
     @ExceptionHandler(ConstraintViolationException.class)
-    @ResponseBody
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<ErrorResponse> handleRequestValidationException(Exception ex, HttpServletRequest request) {
 
         errorResponse.setTimestamp(new Date());
