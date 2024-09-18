@@ -58,7 +58,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		<finalName>bottomline-autocomplete-feature</finalName>
+		<finalName>bottomline-autocomplete-project</finalName>
 	</build>
 
 </project>
