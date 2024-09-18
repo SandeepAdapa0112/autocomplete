@@ -21,8 +21,7 @@ public class AutoCompleteController {
 
     @GetMapping("/getAllEmployees")
     public List<String> getAllEmployeesList( @RequestParam @NotBlank(message = "Searched word should not be blank")@Pattern.List({
-            @Pattern(regexp = "^[\\p{Alpha}]*$", message = "Name should contain only alphabets"),
-            @Pattern(regexp = "^[^\\s].*$", message = "Name should not start with space")
+            @Pattern(regexp = "^[\\p{Alpha}]*$", message = "Name should contain only alphabets")
     }) String searchName)
     {
         String employeeName = CaseUtils.toCamelCase(searchName,true);
